@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            height: auto;
+            width: 1200px;
+            border: 0px solid black;
+            padding: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+            .header .header-text, .home-link {
+                margin: 10px;
+            }
+
+                .header .header-text p {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+            .header .home-link {
+                border: 1px solid black;
+                padding: 8px 5px;
+                background-color: #ff6961;
+                color: black;
+                border-radius: 4px;
+            }
+
+        .heading {
+            font-weight: 200;
+            margin-left: 5px;
+        }
+
+        .pane-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .left-pane {
+            width: 25%;
+            position: fixed;
+            overflow-y: scroll;
+            margin-top: 0px;
+        }
+
+            .left-pane ul li {
+                border-bottom: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+                border-top: 1px solid #c2c2c2;
+                font-size: 15px;
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                list-style-type: none;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .left-pane p {
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 18px;
+                border-top: 1px solid #c2c2c2;
+            }
+
+            .left-pane ul li:hover {
+                background-color: #ff6347;
+            }
+
+        .right-pane {
+            width: 75%;
+            margin-left: 380px;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .buttons .button {
+                border: 1px solid black;
+                margin: 10px 5px;
+                padding: 5px 15px;
+                background-color: #ff6961;
+                color: black;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+        .main-content {
+            margin-top: 25px;
+            height: 100vh;
+        }
+
+            .main-content p {
+                padding: 10px 5px;
+                //letter-spacing:1.0px;
+                line-height: 30px;
+                font-size: 18px;
+                //font-weight:100;
+            }
+
+            .main-content ol {
+                padding: 10px 5px;
+                margin-left: 30px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+                .main-content ol li {
+                    margin-bottom: 18px;
+                    font-size: 18px;
+                }
+
+        span {
+            color: #ff6347;
+        }
+
+        .sub {
+            margin-left: 10px;
+        }
+
+        .sub2 {
+            margin-left: 20px;
+        }
+
+        .video-container {
+            width: 600px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+            .video-container video {
+                width: 100%;
+            }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .empty {
+            margin-bottom: 100px;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        .top {
+            margin-top: 20px;
+        }
+
+        #content {
+            border: 1px solid black;
+        }
+
+        @media only screen and (max-width:480px) {
+            body {
+                background-color: none;
+                width: 480px;
+            }
+
+            .toggle {
+                display: block;
+                //background-color:black;
+                border: 2px solid black;
+                width: 300px;
+                height: 30px;
+            }
+
+            .bar {
+                border: 1px solid black;
+                width: 20px;
+                margin-top: 5px;
+            }
+
+            .container {
+                width: 100%;
+                border: 0px solid blue;
+            }
+
+            .left-pane {
+                visibility: hidden;
+                width: 0%;
+                border: 1px solid red;
+            }
+
+            .right-pane {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .main-content {
+                width: 100%;
+                border: 0px solid blue;
+                margin-left: 0px;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            .video-container {
+                width: 480px;
+                height: auto;
+                margin: 10px auto;
+            }
+
+                .video-container video {
+                    width: 90%;
+                }
+
+            img {
+                width: 100%;
+                height: 120px;
+            }
+
+            .heading {
+                font-size: 20px;
+                //font-weight:900;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <p>Web<span>Dev</span></p>
+            </div>
+             <!--<div class="home-link">
+            <p>Back to Home</p>
+             </div>-->
+        </div>
+        <div class="pane-container">
+            <div class="left-pane">
+                <p>Table Of Contents</p>
+                <ul>
+                    <a href="#prerequisites"><li>Prerequisites</li></a>
+                    <a href="#framework"><li>Express Server Framework</li></a>
+                    <a href="#working_folder"><li class="sub">Creating Your Working Folder</li></a>
+                    <a href="#installing_express"><li class="sub">Installing Express</li></a>
+                    <a href="#creating_server"><li class="sub">Creating The Express Server</li></a>
+                    <a href="#running_server"><li class="sub">Running The Express Server</li></a>
+                    <a href="#final_code"><li class="sub">Final Code</li></a>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                </ul>
+            </div>
+            <div class="right-pane">
+                <div class="buttons">
+                    <div class="button"><a href="index.html">< Previous</a></div>
+                    <div class="button"><a href="blogTwoNew.html">Next ></a></div>
+                </div>
+                <div class="main-content">
+                    <div class="section" id="section1">
+                        <h1 class="heading">How to Create a Simple Web Server?</h1>
+                        <p>Web server is just another computer responsible for hosting web apps and serving them on our browsers on a request/response basis.</p>
+                        <p>In this blog, let’s create a simple web server using express ( a server framework built on top of node.js).</p>
+
+
+                        <h2 class="heading top" id="prerequisites">Prerequisites</h2>
+                        <p>To be able to use express, you should have installed node.js and npm package in your system. (For further details on installation, you can refer to the these articles: How to Install Node.js and Npm Package?)</p>
+
+
+                        <h2 class="heading top">But First, What Is Node.js and NPM Package?</h2>
+                        <p>Node.js helps you build the web server environment. Whereas NPM package helps you decide the dependencies (packages or modules) your webserver needs to function. For example, there’s a package that enables the webserver to send mails to users, there’s a package that enables the webserver to authenticate your users etc.</p>
+
+                        <h1 class="heading top" id="framework">Express - The Server Framework For Node.js</h1>
+                        <p>It’s time to install express now that you know a bit about node and npm package (and probably have installed them on your system). Express makes it easy to create a Node.js server using fewer lines of code. (You will understand this if you study the differences between a simple node.js server and a express server).</p>
+
+
+                        <h2 class="heading top" id="working_folder">Creating Your Working Folder</h2>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/npminit.mp4" />
+                            </video>
+                        </div>
+
+
+                        <ol>
+                            <li>Create a folder somewhere on your system. This is going to host our server files. Name it ‘web_server’ or something like that. Access the folder using command line interface (CMD) as shown in the clip.</li>
+                            <li>To know what is a command line interface and how they can be used, read this article: [CMD].</li>
+                            <li>Once into the working folder, type the following command: npm init -y</li>
+                            <li>You will get a bunch of code as a response. This is nothing but the basic details about the app you are going to create like version number, its description, the default page to be served to the users (also known as entry point), author and more.</li>
+
+                        </ol>
+
+                        <p><b>Note:</b> Usually command npm init is enough to get our project up and running, but you have to manually type out each and every detail. So for the time being we have automated the task by typing in an additional -y, which simply means yes to all the questions.</p>
+
+                        <p><b>Note:</b> Now go into your working folder and you’ll notice that there is a file called package.json. If you open it up, you’ll notice that it will contain the same details that were displayed in the console. The purpose of this file, apart from serving as a document indicating ownership, is to help other developers collaborate and extend your web app.</p>
+                        <p>Now that the preliminaries have been completed, it’s time to install express.</p>
+
+                        <h2 class="heading top" id="installing_express">Installing Express</h2>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/installexpress.mp4" />
+                            </video>
+                        </div>
+                        <ol>
+                            <li>Express is also an NPM package and you can install it on your working folder by running the following command in your cmd: npm install express (or) npm i express</li>
+                            <li>Now go back to your package.json file and you’ll see that there will be a new entry called dependencies and it will contain express along with the version you just installed. So as you include various modules (NPM packages) to your server, they get added to the package.json file.</li>
+                        </ol>
+                        <p><b>Note:</b> This is how package.json helps other developers collaborate with your web app and extend it, by letting them know what packages are needed to get your web app up and running.</p>
+
+                        <h2 class="heading top" id="creating_server">Creating The Express Server</h2>
+                        <p>Finally, it’s time to create our web server. Using a code editor like visual studio, create a .js file called index.js (the default entry point created previously as we ran the npm init command) and save it in your working folder.</p>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/simpleserver.mp4" />
+                            </video>
+                        </div>
+                        <p>Then, do the following:</p>
+                        <ol>
+                            <li>You have to require express in your server file. (It’s not enough to just install it). You can do this by typing the following: const express = require('express');</li>
+                            <li>As you can see, we save the required express module using a const variable express. (Of course, you can name the variable whatever you want, but that would be going against the established convention).</li>
+                            <li>Then we pass on all the properties and functionalities of express to another variable called app (which will serve as our server), by typing the following line: const app = express();</li>
+                            <li><b>Note:</b> to be precise, express functionalities are being passed as an object to app, so that it can use it without directly having to call express variable each time.</li>
+                            <li>Now it’s time to run our app on some port number in your system. This can be done by using the following line: app.listen(3000, …);</li>
+                            <li>Basically what this means is that we are making our app to listen to port 3000 (or in other words, run on port 3000). And the ‘… is where the callback function is supposed to go. (To know more about callback functions, read this article: ).</li>
+                            <li>For now, we will write a simple callback function that console logs server is running @ port 3000. To do this, replace the … with the following code:</li>
+                            <li><b>Note:</b>Don't forget to save your file.</li>
+                        </ol>
+
+                        <h2 class="heading top" id="running_server">Running the Express Server</h2>
+                        <br />
+                        <ol>
+                            <li>It’s time to run your webserver. You can do this by going into the working folder via the command line interface, and typing the following command:node index.js</li>
+                            <li>You’ll notice the message we just created gets console logged.</li>
+                        </ol>
+
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/runserver.mp4" />
+                            </video>
+                        </div>
+
+                        <p>There you go! You just created a simple web server using express! Though it does not do nothing at the moment, everything is in place and it runs as it is supposed to. That’s something! In the next post, let’s extend on this server and make it do something - like displaying a message on your browser. Till then, keep learning, keep growing!</p>
+
+                        <h2 class="heading top" id="final_code">Final Code</h2>
+                        <br/>
+                        <div class="server_code" id="server_code">
+                            
+
+                            <button id="btn" class="btn">Click To Copy</button>
+                            <div id="content" contenteditable="true">
+                                <p><code> const express = require('express');</code></p>
+                                <p><code>const app = express(); </code></p>
+
+
+                                <p><code>app.listen('3000', function () {</code></p>
+                                <p>
+                                    <code style="margin-left:25px;">
+
+                                        console.log('server is running @ 3000');
+                                    </code>
+                                </p>
+
+
+                                <p><code>})</code></p>
+                            </div>
+
+
+                        </div>
+
+                        <br />
+
+
+                    </div>
+                
+
+
+            </div>
+               
+        </div>
+        </div> 
+    </div>
+    <script>
+        
+            var content = document.querySelector('#content');
+            var btn = document.querySelector('#btn');
+
+            btn.addEventListener('click', copyText);
+        btn.style.padding = '2px';
+        btn.style.marginBottom = '2px';
+
+            function copyText() {
+                let temp = content.innerText;
+                copytoClipBoard(temp);
+
+            }
+
+            function copytoClipBoard(str) {
+                const textarea = document.createElement("textarea");
+                textarea.value = str;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                btn.innerText = 'Copied!'
+                //output.innerHTML = "<h3>Copied content</h3>" + textarea.value;
+               
+
+            }
+
+            console.log(content)
+    </script>
+   
+</body>
+</html>

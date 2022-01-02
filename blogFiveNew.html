@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            margin:0px; 
+            padding:0px;
+            box-sizing:border-box; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+
+        xmp{
+            display:inline; 
+        }
+
+        .container{
+            height:auto; 
+            width:1200px;
+            border:0px solid black;
+            padding:10px;
+            
+        }
+
+        html{
+            scroll-behavior: smooth; 
+        }
+
+        .header{
+            display:flex;
+            align-items:center; 
+            justify-content:space-between; 
+            border:1px solid black;
+            border-radius:4px;
+            
+            
+        }
+        .header .header-text, .home-link {
+            margin:10px 10px;
+        }
+        .header .header-text p{
+            font-size:25px;
+            font-weight:600;
+        }
+
+        .header .home-link{
+            border:1px solid black; 
+            padding:8px 5px;
+            background-color:#ff6961; 
+            color:black;
+            border-radius:4px;
+        }
+
+        img{
+            width:800px;
+            height:100px;
+            //object-fit:cover;
+        }
+
+        .heading{
+            font-weight:200;
+            margin:10px 3px;
+        }
+
+        .pane-container{
+            display:flex; 
+            margin-top:20px;
+                        
+        }
+
+        .left-pane{
+            width:25%; 
+            position:fixed; 
+            overflow-y:scroll;
+            margin-top:0px;
+              
+            
+        }
+
+            .left-pane ul li {
+                border-bottom: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+                border-top: 1px solid #c2c2c2;
+                font-size: 15px;
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                list-style-type: none;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .left-pane p {
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 18px;
+                border-top: 1px solid #c2c2c2;
+            }
+
+                .left-pane ul li:hover {
+                    background-color: #ff6347; 
+                }
+
+        .right-pane {
+            width: 75%;
+            margin-left: 380px;
+            
+        }
+
+        .ref{
+            margin-bottom:20px;
+            margin-top:0px;
+        }
+        
+
+        .buttons{
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+        }
+
+        .buttons .button{
+            border:1px solid black; 
+            margin: 10px 5px;
+            padding:5px 15px;
+            background-color:#ff6961; 
+            color:black; 
+            cursor:pointer; 
+            border-radius:4px;
+        }
+        .main-content{
+            margin-top:25px;
+            height:100vh;
+        }
+
+        .main-content p{
+            padding:10px 5px;
+            //letter-spacing:1.0px;
+            line-height:30px;
+            font-size:18px;
+            //font-weight:100;
+        }
+
+            .main-content ol {
+                padding: 10px 5px;
+                margin-left: 30px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .main-content ol li{
+                margin-bottom:18px;
+                font-size:18px;
+            }
+
+        span{
+            color:#ff6347; 
+        }
+
+        #show {
+            position: absolute;
+            right: 8px;
+            background-color: black;
+            color: white;
+            padding:1px 2px;
+            border-radius:4px;
+            cursor:pointer; 
+        }
+
+        .hide{
+            display:none; 
+        }
+
+        .sub{
+            margin-left:10px;
+        }
+
+        .sub2 {
+            margin-left: 20px;
+        }
+
+        .video-container{
+            width:600px;
+            height:auto;
+            margin:10px auto;
+        }
+
+        .video-container video{
+            width:100%; 
+        }
+
+        a{
+            text-decoration:none; 
+            color:black;
+        }
+        .empty{
+            margin-bottom:100px;
+        }
+        
+        section{
+            height:100vh;
+        }
+
+        .anotherheading{
+            margin:15px 5px;
+            font-weight:200; 
+        }
+
+        .top {
+            margin-top: 20px;
+        }
+
+        #content{
+            border:1px solid black;
+        }
+
+        .related-reading{
+            
+        }
+        
+
+        .related-reading li {
+            font-size:8px;
+            margin-left:0px 15px;
+            color:black;
+            text-decoration:underline;
+            letter-spacing:0.5px;
+            
+        }
+
+        @media only screen and (max-width:480px) {
+            body {
+                background-color: none;
+                width: 480px;
+            }
+
+            .toggle {
+                display: block;
+                //background-color:black;
+                border: 2px solid black;
+                width: 300px;
+                height: 30px;
+            }
+
+            .bar {
+                border: 1px solid black;
+                width: 20px;
+                margin-top: 5px;
+            }
+
+            .container {
+                width: 100%;
+                border: 0px solid blue;
+            }
+
+            .left-pane {
+                visibility: hidden;
+                width: 0%;
+                border: 1px solid red;
+            }
+
+            .right-pane {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .main-content {
+                width: 100%;
+                border: 0px solid blue;
+                margin-left: 0px;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            .video-container {
+                width: 480px;
+                height: auto;
+                margin: 10px auto;
+            }
+
+                .video-container video {
+                    width: 90%;
+                }
+
+            img {
+                width: 100%;
+                height: 120px;
+            }
+
+            .heading {
+                font-size: 20px;
+                //font-weight:900;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <p>Web<span>Dev</span></p>
+            </div>
+            <!--<div class="home-link">
+            <p>Back to Home</p>
+             </div>-->
+        </div>
+        <div class="pane-container">
+            <div class="left-pane">
+                <p>Table Of Contents</p>
+                <ul>
+                    <a href="#routing"><li class="tLink">Routing</li></a>
+                    <a href="#crud_and_routing"><li class="tLink">CRUD and Routing Relationship</li></a>
+                    <a href="#json_server"><li class="tLink">Why Use JSON Server?</li></a>
+                    <a href="#json_server_operation"><li class="tLink">How Does JSON Server Operate?</li></a>
+                    <li class="tLink1"><a href="#crud_with_json_server">CRUD Routing Using JSON Server</a><span id="show">Show</span></li>
+                    <div class="hide">
+                        <li class="sub"><a href="#install_json_server">Install JSON Server</a></li>
+                        <li class="sub"><a href="#configure_db_file">Configure db.json file</a></li>
+                        <li class="sub"><a href="#running_json_server">Running JSON Server</a></li>
+                        <li class="sub"><a href="#r_of_crud">R Of CRUD</a></li>
+                        <li class="sub"><a href="#cud_of_crud">Introducing Postman</a></li>
+                 
+                        <li class="sub"><a href="#c_of_cud">C Of CUD</a></li>
+                        <li class="sub"><a href="#u_of_cud">U Of CUD</a></li>
+                        <li class="sub"><a href="#d_of_cud">D Of CUD</a></li>
+                    </div>
+                    
+
+                   
+
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+
+                </ul>
+            </div>
+            <div class="right-pane">
+                <div class="buttons">
+                    <div class="button"><a href="blogFourNew.html">< Previous</a></div>
+                    <div class="button"><a href="blogSixNew.html">Next></a></div>
+                </div>
+                <div class="main-content">
+                    <div class="section" id="section1">
+                        <h1 class="heading"> Routing and CRUD Using JSON Server</h1>
+
+                        <p>In this blog post, let’s try to understand i) what is routing ii) what are CRUD operations and iii) the relationship that exists between routing and CRUD operations.</p>
+
+                        <h2 class="heading top" id="routing">Routing</h2>
+                        <p>Setting up a url such that it performs some operation is what is known as routing. In static websites, urls redirect users to different pages of the website. In web applications, these same urls are designated with the task of triggering some functionality (dynamically) that the user is requesting for.</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/routing-blog-one.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <br />
+                        <h2 class="heading top" id="crud_and_routing">Relationship Between Routing and CRUD</h2>
+                        <p>Every route we create will be responsible for triggering one of the CRUD operations. Let’s assume you are creating an employee management application.   </p>
+                        <p>Then you’ll need specific routes that allow users to do the following :</p>
+                        <ol style="letter-spacing:0.3px; ">
+                            <li style="margin-left: 20px;">Creating the Employee - 'C' Of CRUD</li>
+                            <li style="margin-left: 20px;">Updating the Employee - 'U' Of CRUD</li>
+                            <li style="margin-left: 20px;">Reading the Employee data - 'R' Of CRUD and</li>
+                            <li style="margin-left: 20px;">Deleting the Employee - 'D' Of CRUD</li>
+                        </ol>
+                        <p><b>Note:</b> To perform the above CRUD operations, we require different routes. The process of laying down different routes is known as routing.</p>
+                        <br />
+
+
+
+
+                        <h2 class="heading top" id="json_server">Why Use JSON Server?</h2>
+                        <p>JSON Server is an npm package front-end developers use to quickly set up mock backend APIs (urls) so that they can focus exclusively on designing the front-end part without really having to setup a server. That's why it also a great tool for beginners to learn CRUD URLs, because it allows them to focus exclusively on setting up CRUD URLs without having to configure a server.</p>
+                        <p><b>Note:</b> But What Are APIs? It’s just a fancy name given to the bunch of URLs we’ll be creating to perform the CRUD. Read more about API(s) here.</p>
+
+
+
+
+
+
+
+                        <h2 class="heading top" id="json_server_operation">How Does JSON Server Operate?</h2>
+                        <p>To perform CRUD operations, we need data. That means we need a database. And the JSON server makes use of a db.json file (which we are required to create) as our database to store that data.</p>
+                        <p>As far as the server is concerned, the JSON server creates it for us (and runs it at localhost:3000) behind the scenes, so that we can just focus on creating the urls for performing the CRUD.</p>
+                        <p><b>Note:</b> Just like that! No need for express for server or mongodb for database. Ideal for beginners to practice CRUD.</p>
+
+
+
+
+
+                        <h2 class="heading top" id="crud_with_json_server">CRUD Routing Using JSON Server</h2>
+                        <p>
+                            Simply put, we are going to configure a bunch of routes (or URLs) that will be responsible for: Creating, Reading, Updating and Deleting (CRUD) data.
+
+                        </p>
+                        <br />
+                        <h2 class="heading top" id="install_json_server">Install JSON Server</h2>
+
+                        <div class="video-container" style="border:1px solid black;">
+                            <video controls>
+                                <source src="videos/install-json-server.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <br />
+
+                        <h2 class="heading top" id="configure_db_file">Configure db.json file</h2>
+                        <p>It’s time to set up our database. So create a file called db.json somewhere in your system and add the following code to it and save the file.</p>
+                        <p><b>Note:</b> Always best to create a separate folder and save db.json file in it.</p>
+                        <div class="video-container" style="border:1px solid black;">
+                            <p style="color:red;">[code for the json file should go here]</p>
+                        </div>
+                        <br />
+
+                        <h2 class="heading top" id="running_json_server">Running JSON Server</h2>
+
+                        <div class="video-container" style="border:1px solid black;">
+                            <video controls>
+                                <source src="videos/start-json-server.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <br />
+
+
+
+                        <h2 class="heading top" id="r_of_crud">R Of CRUD</h2>
+                        <p>Reading existing data is always the easiest to perform. So let's read the data we stored in our db.json file.</p>
+                        <p>This can be done in two ways: </p>
+                        <ol style="letter-spacing:0.3px;">
+                            <li style="margin-left: 25px">read all of the data</li>
+                            <li style="margin-left: 25px">read 'one' of the data with the help of the id property</li>
+                        </ol>
+                        <p>Reading All JSON Server Data</p>
+                        <div class="video-container" style="border:1px solid black;">
+                            <video controls>
+                                <source src="videos/get-json-data.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <ol style="letter-spacing:0.3px;">
+                            <li>Copy the url below the Resources section and access it via the browser.</li>
+                            <li>You’ll notice that the response we get on the browser contains the data we just added in db.json file.</li>
+                            <li>This means we are reading the data from our little database by accessing the localhost:3000/users url.</li>
+                            <li>This is what is known as a GET request.</li>
+                        </ol>
+
+                        <br />
+
+                        <p>Reading Single JSON Server Data</p>
+                        <div class="video-container" style="border:1px solid black;">
+                            <video controls>
+                                <source src="videos/get-single-json-data.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <ol style="letter-spacing:0.3px;">
+                            <li>To get a specific (or individual) data, say Ramesh, from our /users route, we have to pass the respective data’s id as a part of the url as shown above.</li>
+                            <li><b>Note:</b> databases contain id(s) for uniquely identifying each and every record. Our json-server replicates the same behaviour.</li>
+                        </ol>
+
+                        <h2 class="heading top" id="r_of_crud">CUD Of CRUD</h2>
+                        <p>Create, Update and Delete Operation require data submission of some sort. Now we are not going to setup a user interface here (since our goal is to get the endpoints working and not data submission).</p>
+                        <p>Instead we’ll be using an endpoint (or api or application url) testing tool called Postman that will help us to submit data to our server.</p>
+                        <img src="images/postman.jpg" />
+
+
+                        <h2 class="heading top" id="r_of_crud">Introducing POSTMAN</h2>
+                        <p>Postman is very easy to setup and can even be installed in your system locally. As shown in the image above, Postman contains an address bar (where you can type out your server endpoints) and a send button to send data to the server. To the left of the address bar, there will be a dropdown that lists several methods.</p>
+                        <p>For now, we’ll just focus on the following: POST, PATCH and DELETE (since we have already seen 'GET')</p>
+
+                        <h2 class="heading top" id="r_of_crud">Testing Routes (Endpoints) Using Postman</h2>
+                        <p>Adding Data To Server (C of CRUD)</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/postmanAdd.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <ol style="letter-spacing:0.3px;">
+                            <li>Select the method as ‘POST’ from the dropdown</li>
+                            <li>Type in the url (or endpoint) as localhost:3000/users</li>
+                            <li>In the Body section, select raw as the option, and set JSON(application/json) as the option.</li>
+                            <li>Now type in the data. It should follow the same pattern we saw in the db.json file.</li>
+                            <li>Hit Send button</li>
+                        </ol>
+
+
+
+                        <p>Updating Data Already Existing In Server (U of CRUD)</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/postmanPatch.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <ol style="letter-spacing:0.3px;">
+                            <li>Select the method as ‘PATCH’ from the dropdown</li>
+                            <li>Type in the endpoint with the id of the data you want to update.(localhost:3000/users/103)</li>
+                            <li>In the Body section, select raw as the option, and set JSON(application/json) as the option.</li>
+                            <li>Now update or modify the record's content</li>
+                            <li>Hit Send button</li>
+                        </ol>
+
+
+
+                        <p>Deleting Data From Server (D of CRUD)</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/postmanDelete.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <ol style="letter-spacing:0.3px;">
+                            <li>Select the method as ‘DELETE’ from the dropdown</li>
+                            <li>Type in the endpoint with the id of the data you want to delete.(localhost:3000/users/103)</li>
+                            <li>In the Body section, select raw as the option, and set JSON(application/json) as the option.</li>
+
+                            <li>Hit Send button</li>
+                        </ol>
+
+                        <br />
+
+
+
+
+
+                        <h2 class="heading top" style="color:red;" id="final_code">Final Code</h2>
+                        <br />
+                        <div class="server_code" id="server_code">
+
+
+                            <button id="btn" class="btn">Click To Copy</button>
+                            <div id="content" contenteditable="true">
+                                <p><code> const express = require('express');</code></p>
+                                <p><code>const app = express(); </code></p>
+
+
+                                <p><code>app.listen('3000', function () {</code></p>
+                                <p>
+                                    <code style="margin-left:25px;">
+
+                                        console.log('server is running @ 3000');
+                                    </code>
+                                </p>
+
+
+                                <p><code>})</code></p>
+                            </div>
+
+
+                        </div>
+
+                        <br /><br />
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+
+            var content = document.querySelector('#content');
+            var btn = document.querySelector('#btn');
+
+            btn.addEventListener('click', copyText);
+        btn.style.padding = '2px';
+        btn.style.marginBottom = '2px';
+
+            function copyText() {
+                let temp = content.innerText;
+                copytoClipBoard(temp);
+
+            }
+
+            function copytoClipBoard(str) {
+                const textarea = document.createElement("textarea");
+                textarea.value = str;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                btn.innerText = 'Copied!'
+                //output.innerHTML = "<h3>Copied content</h3>" + textarea.value;
+
+
+            }
+
+        console.log(content)
+
+        //var titleLinks = document.querySelecxtorAll('.tLink');
+        //var tLink1 = document.querySelector('.tLink1');
+
+        /*tLink1.addEventListener('click', function (e) {
+            e.target.nextElementSibling.classList.toggle('hide');
+        })*/
+
+        /*titleLinks.forEach((titleLink) => {
+            titleLink.addEventListener('click', function (e) {
+                alert('clicked')
+                console.log(e.target.nextSibling)
+            })
+        })*/
+
+        var shows = document.querySelectorAll('#show');
+        shows.forEach((show) => {
+            show.addEventListener('click', function (e) {
+                e.target.innerText = 'Show';
+                e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+            })
+        })
+
+
+
+            /*show.addEventListener('click', function (e) {
+            e.target.innerText = 'Show';
+            e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+        })*/
+
+    </script>
+
+</body>
+</html>

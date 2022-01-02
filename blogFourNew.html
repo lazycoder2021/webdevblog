@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        xmp {
+            display: inline;
+        }
+
+        .container {
+            height: auto;
+            width: 1200px;
+            border: 0px solid black;
+            padding: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+            .header .header-text, .home-link {
+                margin: 10px 10px;
+            }
+
+                .header .header-text p {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+            .header .home-link {
+                border: 1px solid black;
+                padding: 8px 5px;
+                background-color: #ff6961;
+                color: black;
+                border-radius: 4px;
+            }
+
+        .heading {
+            font-weight: 200;
+            margin: 10px 3px;
+        }
+
+        .pane-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .left-pane {
+            width: 25%;
+            position: fixed;
+            overflow-y: scroll;
+            margin-top: 0px;
+        }
+
+            .left-pane ul li {
+                border-bottom: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+                border-top: 1px solid #c2c2c2;
+                font-size: 15px;
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                list-style-type: none;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .left-pane p {
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 18px;
+                border-top: 1px solid #c2c2c2;
+            }
+
+            .left-pane ul li:hover {
+                background-color: #ff6347;
+            }
+
+        .right-pane {
+            width: 75%;
+            margin-left: 380px;
+        }
+
+        .ref {
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .buttons .button {
+                border: 1px solid black;
+                margin: 10px 5px;
+                padding: 5px 15px;
+                background-color: #ff6961;
+                color: black;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+        .main-content {
+            margin-top: 25px;
+            height: 100vh;
+        }
+
+            .main-content p {
+                padding: 10px 5px;
+                //letter-spacing:1.0px;
+                line-height: 30px;
+                font-size: 18px;
+                //font-weight:100;
+            }
+
+            .main-content ol {
+                padding: 10px 5px;
+                margin-left: 30px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+                .main-content ol li {
+                    margin-bottom: 18px;
+                    font-size: 18px;
+                }
+
+        span {
+            color: #ff6347;
+        }
+
+        #show {
+            position: absolute;
+            right: 8px;
+            background-color: black;
+            color: white;
+            padding: 1px 2px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .sub {
+            margin-left: 10px;
+        }
+
+        .sub2 {
+            margin-left: 20px;
+        }
+
+        .video-container {
+            width: 600px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+            .video-container video {
+                width: 100%;
+            }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .empty {
+            margin-bottom: 100px;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        .anotherheading {
+            margin: 15px 5px;
+            font-weight: 200;
+        }
+
+        .top {
+            margin-top: 20px;
+        }
+
+        #content {
+            border: 1px solid black;
+        }
+
+        .related-reading {
+        }
+
+
+            .related-reading li {
+                font-size: 8px;
+                margin-left: 0px 15px;
+                color: black;
+                text-decoration: underline;
+                letter-spacing: 0.5px;
+            }
+
+        @media only screen and (max-width:480px) {
+            body {
+                background-color: none;
+                width: 480px;
+            }
+
+            .toggle {
+                display: block;
+                //background-color:black;
+                border: 2px solid black;
+                width: 300px;
+                height: 30px;
+            }
+
+            .bar {
+                border: 1px solid black;
+                width: 20px;
+                margin-top: 5px;
+            }
+
+            .container {
+                width: 100%;
+                border: 0px solid blue;
+            }
+
+            .left-pane {
+                visibility: hidden;
+                width: 0%;
+                border: 1px solid red;
+            }
+
+            .right-pane {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .main-content {
+                width: 100%;
+                border: 0px solid blue;
+                margin-left: 0px;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            .video-container {
+                width: 480px;
+                height: auto;
+                margin: 10px auto;
+            }
+
+                .video-container video {
+                    width: 90%;
+                }
+
+            img {
+                width: 100%;
+                height: 120px;
+            }
+
+            .heading {
+                font-size: 20px;
+                //font-weight:900;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <p>Web<span>Dev</span></p>
+            </div>
+            <!--<div class="home-link">
+            <p>Back to Home</p>
+             </div>-->
+        </div>
+        <div class="pane-container">
+            <div class="left-pane">
+                <p>Table Of Contents</p>
+                <ul>
+                    <a href="#configuring_server"><li class="tLink">Configuring Express Server</li></a>
+                    <a href="#mongodb_connection"><li class="tLink">Connecting to MongoDB</li></a>
+                    <li class="tLink1"><a href="#create_database">Creating the Database</a><span id="show">Show</span></li>
+                    <div class="hide">
+                        <li class="sub"><a href="#mongoose_schema_model">What is mongoose schema and model?</a></li>
+                        <li class="sub"><a href="#mongoose_schema">Creating mongoose schema</a></li>
+                        <li class="sub"><a href="#mongoose_model">Creating mongoose model</a></li>
+                    </div>
+                    <a href="#create_post_route"><li class="tLink">Creating Express Post Route</li></a>
+                    <a href="#postman"><li class="tLink">Using Postman to Post Data</li></a>
+                    <a href="#check_posted_data"><li class="tLink">Checking MongoDB for Posted Data</li></a>
+                    <a href="#final_code"><li class="tLink">Final Code</li></a>
+
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+
+                </ul>
+            </div>
+            <div class="right-pane">
+                <div class="buttons">
+                    <div class="button"><a href="blogThreeNew.html">< Previous</a></div>
+                    <div class="button"><a href="blogFiveNew.html">Next ></a></div>
+                </div>
+                <div class="main-content">
+                    <div class="section" id="section1">
+                        <h1 class="heading">Pushing Data From Express Server To MongoDB</h1>
+
+                        <p><b>Preqrequisite:</b> It’s good to know MongoDB basics, but is not absolutely necessary. But you should have installed MongoDB and nodejs/npm package in your system. To know more about how to install Mongo DB locally, read this: [article]. To know more about how to install node and npm package, read this: [article]</p>
+
+                        <h2 class="heading top" id="configuring_server">Configuring Express Server</h2>
+                        <p>Configure express server to run at localhost:3000. That is, install express (after initializing your express project using npm init command) and make it run (or listen to) on port 3000 as shown below</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/1.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <br />
+                        <h2 class="heading top" id="mongodb_connection">Connecting to MongoDB</h2>
+                        <p>As explained in this <u>blog</u>, you have to require/install mongoose package to connect to mongodb. After installing mongoose, connect your express server to mongodb using mongoose.connect() method.  </p>
+                        <br />
+
+
+
+
+                        <h2 class="heading top" id="create_database">Creating the MongoDB Database</h2>
+                        <p>You need to configure mongoose schema and model to setup a mongodb database.</p>
+                        <p><b>Note:</b> mongoose schema and model help you structure the data in your database.</p>
+                        <br />
+                        <h3 class="heading anotherheading" id="mongoose_schema_model"><b>What is mongoose schema and model?</b></h3>
+                        <p>Every database record is an object with several properties. For example, user object (or record) can have several properties like name, email, DOB, address etc., The mongoose.schema method helps you define the properties an object can have. In other words, it helps you define the structure (schema) of a mongoDB database record.</p>
+                        <p>Whereas mongoose.model method helps you model (copy) the schema you just created and create records based out of that schema type.</p>
+                        <p> <b>Note:</b> Every database record (or object) is known as a document in mongoDB terminology. Similarly, grouping of records (or objects) of same type is known as a collection.</p>
+                        <br />
+                        <h3 id="mongoose_schema">Creating mongoose schema</h3>
+                        <br />
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/schema.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <p>mongoose.Schema method takes in an object. This object contains as its key:value pair the properties of a mongoDB document and its data type.</p>
+                        <p>Going by the clip above, this means each of our mongoDB document is going to contain a name and a email property. Both are going to be strings (that the user will be required to submit if there was a UI)</p>
+                        <p> <b>Note:</b> To know more about JavaScript objects, read [article]</p>
+                        <br />
+                        <h3 id="mongoose_model">Creating mongoose model</h3>
+                        <br />
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/model.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <p>Now we have to derive a user data model from our userSchema. Only then we will be able to create data based out of our userSchema. The user data model can be created as shown above.</p>
+                        <p>mongoose.model method takes in two arguments: i) name of the data model (which could be anything) and ii) the schema from which it is deriving the data to be modelled after.</p>
+                        
+
+                        
+
+
+
+                        <h2 class="heading top" id="create_post_route">Creating Express Post Route (for posting data to mongodb)</h2>
+                        <p>Now that our data schema and model are ready, we can try posting data from our server to the mongodb and see if that works. But, first, we have to create a post route that enables our server to post data to our database as shown in the clip below.</p>
+                        
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/postingData.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <p>What is our Post Route Doing?</p>
+                        <ol style="letter-spacing:0.3px;">
+                            <li>Apart from enabling our server to receive the data being posted to it at '/' route, it creates an instance of the User model (that makes use of userSchema) </li>
+                            <li>And prepares the server to capture the ‘name’ and ‘email’ values we are going to be passing to it through the post request’s body (using Postman tool).</li>
+                            <li>Then the route ensures the newly created record gets saved and is sent back as the response when the data is posted successfully to '/'.</li>
+                            
+
+                        </ol>
+                        
+
+                        <h2 class="heading top" id="postman">Using Postman to Post Data</h2>
+                        <p>Since we don't have a dedicated UI at the moment, let use postman to post data to our server.</p>
+
+                        <div class="video-container" style="border:1px solid black;">
+                            <video controls>
+                                <source src="videos/usingpostman.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <p>Steps to be Followed:</p>
+                        <ol style="letter-spacing:0.3px;">
+                            <li>Select 'POST' method from the dropdown.</li>
+                            <li>Click 'Body' option and ensure JSON (application/json) is selected.</li>
+                            <li>Specify the data. Ensure it follows the same userSchema pattern we declared earlier (that contains 'name' and 'email' fields).</li>
+                            <li>Give values to name and email fields of the data object being created.</li>
+                            <li>Click Send. You will get a response back containing the id of the record or data just created. This is a clear indication that data has been successfully posted to the mongodb.</li>
+                        </ol>
+                        
+                        <h2 class="heading top" id="check_posted_data">Checking MongoDB for Posted Data</h2>
+                        <br/>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/video-202.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        
+                        
+                        <h2 class="heading top" style="color:red;" id="final_code">Final Code</h2>
+                        <br />
+                        <div class="server_code" id="server_code">
+
+
+                            <button id="btn" class="btn">Click To Copy</button>
+                            <div id="content" contenteditable="true">
+                                <p><code> const express = require('express');</code></p>
+                                <p><code>const app = express(); </code></p>
+
+
+                                <p><code>app.listen('3000', function () {</code></p>
+                                <p>
+                                    <code style="margin-left:25px;">
+
+                                        console.log('server is running @ 3000');
+                                    </code>
+                                </p>
+
+
+                                <p><code>})</code></p>
+                            </div>
+
+
+                        </div>
+
+                        <br /><br />
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+
+            var content = document.querySelector('#content');
+            var btn = document.querySelector('#btn');
+
+            btn.addEventListener('click', copyText);
+        btn.style.padding = '2px';
+        btn.style.marginBottom = '2px';
+
+            function copyText() {
+                let temp = content.innerText;
+                copytoClipBoard(temp);
+
+            }
+
+            function copytoClipBoard(str) {
+                const textarea = document.createElement("textarea");
+                textarea.value = str;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                btn.innerText = 'Copied!'
+                //output.innerHTML = "<h3>Copied content</h3>" + textarea.value;
+
+
+            }
+
+        console.log(content)
+
+        //var titleLinks = document.querySelecxtorAll('.tLink');
+        //var tLink1 = document.querySelector('.tLink1');
+
+        /*tLink1.addEventListener('click', function (e) {
+            e.target.nextElementSibling.classList.toggle('hide');
+        })*/
+
+        /*titleLinks.forEach((titleLink) => {
+            titleLink.addEventListener('click', function (e) {
+                alert('clicked')
+                console.log(e.target.nextSibling)
+            })
+        })*/
+
+        var shows = document.querySelectorAll('#show');
+        shows.forEach((show) => {
+            show.addEventListener('click', function (e) {
+                e.target.innerText = 'Show';
+                e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+            })
+        })
+
+
+
+            /*show.addEventListener('click', function (e) {
+            e.target.innerText = 'Show';
+            e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+        })*/
+
+    </script>
+
+</body>
+</html>

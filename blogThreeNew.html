@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        xmp {
+            display: inline;
+        }
+
+        .container {
+            height: auto;
+            width: 1200px;
+            border: 0px solid black;
+            padding: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+            .header .header-text, .home-link {
+                margin: 10px 10px;
+            }
+
+                .header .header-text p {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+            .header .home-link {
+                border: 1px solid black;
+                padding: 8px 5px;
+                background-color: #ff6961;
+                color: black;
+                border-radius: 4px;
+            }
+
+        .heading {
+            font-weight: 200;
+            margin: 10px 3px;
+        }
+
+        .pane-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .left-pane {
+            width: 25%;
+            position: fixed;
+            overflow-y: scroll;
+            margin-top: 0px;
+        }
+
+            .left-pane ul li {
+                border-bottom: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+                border-top: 1px solid #c2c2c2;
+                font-size: 15px;
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                list-style-type: none;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+            .left-pane p {
+                font-family: 'Segoe UI';
+                padding: 5px 0px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 18px;
+                border-top: 1px solid #c2c2c2;
+            }
+
+            .left-pane ul li:hover {
+                background-color: #ff6347;
+            }
+
+        .right-pane {
+            width: 75%;
+            margin-left: 380px;
+        }
+
+        .ref {
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .buttons .button {
+                border: 1px solid black;
+                margin: 10px 5px;
+                padding: 5px 15px;
+                background-color: #ff6961;
+                color: black;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+        .main-content {
+            margin-top: 25px;
+            height: 100vh;
+        }
+
+            .main-content p {
+                padding: 10px 5px;
+                //letter-spacing:1.0px;
+                line-height: 30px;
+                font-size: 18px;
+                //font-weight:100;
+            }
+
+            .main-content ol {
+                padding: 10px 5px;
+                margin-left: 30px;
+                letter-spacing: 1.5px;
+                line-height: 30px;
+            }
+
+                .main-content ol li {
+                    margin-bottom: 18px;
+                    font-size: 18px;
+                }
+
+        span {
+            color: #ff6347;
+        }
+
+        #show {
+            position: absolute;
+            right: 8px;
+            background-color: black;
+            color: white;
+            padding: 1px 2px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .sub {
+            margin-left: 10px;
+        }
+
+        .sub2 {
+            margin-left: 20px;
+        }
+
+        .video-container {
+            width: 600px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+            .video-container video {
+                width: 100%;
+            }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .empty {
+            margin-bottom: 100px;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        .anotherheading {
+            margin: 15px 5px;
+            font-weight: 200;
+        }
+
+        .top {
+            margin-top: 20px;
+        }
+
+        #content {
+            border: 1px solid black;
+            width: 900px;
+        }
+
+        .related-reading {
+        }
+
+
+            .related-reading li {
+                font-size: 8px;
+                margin-left: 0px 15px;
+                color: black;
+                text-decoration: underline;
+                letter-spacing: 0.5px;
+            }
+
+        @media only screen and (max-width:480px) {
+            body {
+                background-color: none;
+                width: 480px;
+            }
+
+            .toggle {
+                display: block;
+                //background-color:black;
+                border: 2px solid black;
+                width: 300px;
+                height: 30px;
+            }
+
+            .bar {
+                border: 1px solid black;
+                width: 20px;
+                margin-top: 5px;
+            }
+
+            .container {
+                width: 100%;
+                border: 0px solid blue;
+            }
+
+            .left-pane {
+                visibility: hidden;
+                width: 0%;
+                border: 1px solid red;
+            }
+
+            .right-pane {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .main-content {
+                width: 100%;
+                border: 0px solid blue;
+                margin-left: 0px;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            .video-container {
+                width: 480px;
+                height: auto;
+                margin: 10px auto;
+            }
+
+                .video-container video {
+                    width: 90%;
+                }
+
+            img {
+                width: 100%;
+                height: 120px;
+            }
+
+            .heading {
+                font-size: 20px;
+                //font-weight:900;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <p>Web<span>Dev</span></p>
+            </div>
+            <!--<div class="home-link">
+            <p>Back to Home</p>
+             </div>-->
+        </div>
+        <div class="pane-container">
+            <div class="left-pane">
+                <p>Table Of Contents</p>
+                <ul>
+
+                    <a href="#configuring_server"><li class="tLink">Configuring an Express Server</li></a>
+                    <a href="#installing_requiring_mongoose"><li class="tLink">Install & Require Mongoose</li></a>
+                    <a href="#creating_mongoose_connection"><li class="tLink">Creating Mongoose Connection String</li></a>
+                    <a href="#testing_mongoose_connection"><li class="tLink">Testing Mongoose Connection</li></a>
+                    <a href="#final_code"><li class="tLink">Final Code </li></a>
+
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+                    <li style="color:transparent;">s</li>
+
+                </ul>
+            </div>
+            <div class="right-pane">
+                <div class="buttons">
+                    <div class="button"><a href="blogTwoNew.html">< Previous</a></div>
+                    <div class="button"><a href="blogFourNew.html">Next ></a></div>
+                </div>
+                <div class="main-content">
+                    <div class="section" id="section1">
+                        <h1 class="heading">Connecting Express Server With Local MongoDB</h1>
+
+                        <p>We’ll be using a locally installed MongoDB here. To understand how to connect to Mongo Atlas (which is a cloud database), read this: [blog].</p>
+                        <p><b>Prerequisite:</b> You should have installed MongoDB locally in your system. To know more about how to install Mongo DB, read this: [article].</p>
+                        <br />
+                        <h2 class="heading top" id="configuring_server">Configuring an Express Server</h2>
+                        <p>Configure express server to run at localhost:3000. That is, install express (after initializing your express project using npm init command) and make it run (or listen to) on port 3000 as shown below</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/1.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <br />
+
+                        <h2 class="heading top" id="installing_requiring_mongoose">Installing Mongoose</h2>
+                        <p>You need another npm package called ‘mongoose’ to connect to your Mongo DB. So navigate to your working folder (using cmd) and run the following command:</p>
+
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/2.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <br />
+                        <h2 class="heading top" id="server">Requiring Mongoose</h2>
+                        <p>To use any installed npm module, you have to require it first. So require mongoose into your project as follows:</p>
+                        <div class="video-container">
+                            <video controls loop style="border:1px solid black">
+                                <source src="videos/require-mongoose.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <br />
+
+
+
+
+                        <h2 class="heading top" id="creating_mongoose_connection">Creating Mongoose Connection String</h2>
+                        <p>Mongoose connection string is basically a URI (Unique Resource Identifier) that helps express server connect to the mongo database.</p>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="videos/mongoose.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <p><b>Note:</b> URI stands for Unique Resource Identifier. With URL(s), the resource is identified using their location on the internet. With URI(s), the resource (often installed over a restricted network) is identified based on ‘I’dentifier string. The identifier is our case being the mongoose connection string.</p>
+                        <br />
+                        <h3>Components Of A Mongoose Connection String</h3>
+                        <br />
+                        <ol style="letter-spacing:0.3px;">
+                            <li>Connection Protocol Specification: Just like http protocol helps the server communicate with the world, server has to use mongo protocol when trying to connect with mongoDB. (mongodb://)</li>
+                            <li>Unique Resource Identifier (URI): Location of MongoDB (along with its default port number) within your system. (localhost:27017/)</li>
+                            <li>Database Name: Unique string identifying your database. (testtesttest).</li>
+                            <li>
+                                Connection Flags, If Any: These are flags to counter MongoDB updates. They keep changing from time to time. For now, with local MongoDB, its {useNewUrlParser:true}, which should be passed with the connection string.
+                            </li>
+                        </ol>
+
+
+
+
+
+
+                        <h2 class="heading top" id="testing_mongoose_connection">Testing Mongoose Connection</h2>
+                        <p>Using mongoose.connection method, we can test whether we have successfully connected to mongo db or not by typing the following code.</p>
+                        <div class="video-container">
+                            <video controls style="border:1px solid black;">
+                                <source src="videos/testing-mongoose-connection.mp4" />
+                            </video>
+                        </div>
+
+
+                        <ol style="letter-spacing:0.3px;">
+                            <li>As you can realize from the code, we are going to console log message ‘db connected…’ only if the db connection gets established successfully.</li>
+                            <li>That is, the callback function responsible for console logging the message gets trigged only when the mongoose.connection is turned ‘on’ and in ‘open’ state.</li>
+                            <li>Save index.js and run the file using node index.js command. The message ‘db connected…’ also gets console logged along with the server running message, indicating that you have now successfully connected to your locally installed mongo db. Congrats!</li>
+                        </ol>
+
+                        <div class="video-container">
+                            <video controls style="border:1px solid black;">
+                                <source src="videos/video-101.mp4" />
+                            </video>
+                        </div>
+
+
+
+
+                        <h2 style="color:red;" class="heading top" id="final_code">Final Code</h2>
+                        <br />
+                        <div class="server_code" id="server_code">
+
+
+                            <button id="btn" class="btn">Click To Copy</button>
+                            <div id="content" contenteditable="true">
+                                <p><code> const express = require('express');</code></p>
+                                <p><code>const app = express(); </code></p>
+                                <p><code>const mongoose = require('mongoose');</code></p>
+
+                                <p><code>mongoose.connect('mongodb://localhost:27017/testtesttest', { useNewUrlParser: true });</code></p>
+
+                                <p><code>mongoose.connection.on('open', function () {</code></p>
+
+                                <p>
+                                    <code style="margin-left:25px;">
+
+                                        console.log('db connected...');
+                                    </code>
+                                </p>
+
+                                <p><code>}</code></p>
+
+                                <p><code>app.listen('3000', function () {</code></p>
+                                <p>
+                                    <code style="margin-left:25px;">
+
+                                        console.log('server is running @ 3000');
+                                    </code>
+                                </p>
+
+
+                                <p><code>})</code></p>
+                            </div>
+
+
+                        </div>
+
+                        <br /><br />
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+
+            var content = document.querySelector('#content');
+            var btn = document.querySelector('#btn');
+
+            btn.addEventListener('click', copyText);
+        btn.style.padding = '2px';
+        btn.style.marginBottom = '2px';
+
+            function copyText() {
+                let temp = content.innerText;
+                copytoClipBoard(temp);
+
+            }
+
+            function copytoClipBoard(str) {
+                const textarea = document.createElement("textarea");
+                textarea.value = str;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                btn.innerText = 'Copied!'
+                //output.innerHTML = "<h3>Copied content</h3>" + textarea.value;
+
+
+            }
+
+        console.log(content)
+
+        //var titleLinks = document.querySelecxtorAll('.tLink');
+        //var tLink1 = document.querySelector('.tLink1');
+
+        /*tLink1.addEventListener('click', function (e) {
+            e.target.nextElementSibling.classList.toggle('hide');
+        })*/
+
+        /*titleLinks.forEach((titleLink) => {
+            titleLink.addEventListener('click', function (e) {
+                alert('clicked')
+                console.log(e.target.nextSibling)
+            })
+        })*/
+
+        var shows = document.querySelectorAll('#show');
+        shows.forEach((show) => {
+            show.addEventListener('click', function (e) {
+                e.target.innerText = 'Show';
+                e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+            })
+        })
+
+
+
+            /*show.addEventListener('click', function (e) {
+            e.target.innerText = 'Show';
+            e.target.parentElement.nextElementSibling.classList.toggle('hide');
+
+        })*/
+
+    </script>
+
+</body>
+</html>
