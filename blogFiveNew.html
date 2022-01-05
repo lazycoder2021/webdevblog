@@ -4,79 +4,76 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
-        *{
-            margin:0px; 
-            padding:0px;
-            box-sizing:border-box; 
-            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        xmp{
-            display:inline; 
+        xmp {
+            display: inline;
         }
 
-        .container{
-            height:auto; 
-            width:1200px;
-            border:0px solid black;
-            padding:10px;
-            
+        .container {
+            height: auto;
+            width: 1200px;
+            border: 0px solid black;
+            padding: 10px;
         }
 
-        html{
-            scroll-behavior: smooth; 
+        html {
+            scroll-behavior: smooth;
         }
 
-        .header{
-            display:flex;
-            align-items:center; 
-            justify-content:space-between; 
-            border:1px solid black;
-            border-radius:4px;
-            
-            
-        }
-        .header .header-text, .home-link {
-            margin:10px 10px;
-        }
-        .header .header-text p{
-            font-size:25px;
-            font-weight:600;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 4px;
         }
 
-        .header .home-link{
-            border:1px solid black; 
-            padding:8px 5px;
-            background-color:#ff6961; 
-            color:black;
-            border-radius:4px;
-        }
+            .header .header-text, .home-link {
+                margin: 10px 10px;
+            }
 
-        img{
-            width:800px;
-            height:100px;
+                .header .header-text p {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+            .header .home-link {
+                border: 1px solid black;
+                padding: 8px 5px;
+                background-color: #ff6961;
+                color: black;
+                border-radius: 4px;
+            }
+
+        img {
+            width: 800px;
+            height: 100px;
             //object-fit:cover;
         }
 
-        .heading{
-            font-weight:200;
-            margin:10px 3px;
+        .heading {
+            font-weight: 200;
+            margin: 10px 3px;
         }
 
-        .pane-container{
-            display:flex; 
-            margin-top:20px;
-                        
+        .pane-container {
+            display: flex;
+            margin-top: 20px;
         }
 
-        .left-pane{
-            width:25%; 
-            position:fixed; 
-            overflow-y:scroll;
-            margin-top:0px;
-              
-            
+        .left-pane {
+            width: 25%;
+            position: fixed;
+            overflow-y: scroll;
+            margin-top: 0px;
         }
 
             .left-pane ul li {
@@ -102,49 +99,49 @@
                 border-top: 1px solid #c2c2c2;
             }
 
-                .left-pane ul li:hover {
-                    background-color: #ff6347; 
-                }
+            .left-pane ul li:hover {
+                background-color: #ff6347;
+            }
 
         .right-pane {
             width: 75%;
             margin-left: 380px;
-            
         }
 
-        .ref{
-            margin-bottom:20px;
-            margin-top:0px;
-        }
-        
-
-        .buttons{
-            display:flex; 
-            align-items:center; 
-            justify-content:space-between; 
+        .ref {
+            margin-bottom: 20px;
+            margin-top: 0px;
         }
 
-        .buttons .button{
-            border:1px solid black; 
-            margin: 10px 5px;
-            padding:5px 15px;
-            background-color:#ff6961; 
-            color:black; 
-            cursor:pointer; 
-            border-radius:4px;
-        }
-        .main-content{
-            margin-top:25px;
-            height:100vh;
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .main-content p{
-            padding:10px 5px;
-            //letter-spacing:1.0px;
-            line-height:30px;
-            font-size:18px;
-            //font-weight:100;
+            .buttons .button {
+                border: 1px solid black;
+                margin: 10px 5px;
+                padding: 5px 15px;
+                background-color: #ff6961;
+                color: black;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+        .main-content {
+            margin-top: 25px;
+            height: 100vh;
         }
+
+            .main-content p {
+                padding: 10px 5px;
+                //letter-spacing:1.0px;
+                line-height: 30px;
+                font-size: 18px;
+                //font-weight:100;
+            }
 
             .main-content ol {
                 padding: 10px 5px;
@@ -153,13 +150,13 @@
                 line-height: 30px;
             }
 
-            .main-content ol li{
-                margin-bottom:18px;
-                font-size:18px;
-            }
+                .main-content ol li {
+                    margin-bottom: 18px;
+                    font-size: 18px;
+                }
 
-        span{
-            color:#ff6347; 
+        span {
+            color: #ff6347;
         }
 
         #show {
@@ -167,71 +164,70 @@
             right: 8px;
             background-color: black;
             color: white;
-            padding:1px 2px;
-            border-radius:4px;
-            cursor:pointer; 
+            padding: 1px 2px;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
-        .hide{
-            display:none; 
+        .hide {
+            display: none;
         }
 
-        .sub{
-            margin-left:10px;
+        .sub {
+            margin-left: 10px;
         }
 
         .sub2 {
             margin-left: 20px;
         }
 
-        .video-container{
-            width:600px;
-            height:auto;
-            margin:10px auto;
+        .video-container {
+            width: 600px;
+            height: auto;
+            margin: 10px auto;
         }
 
-        .video-container video{
-            width:100%; 
+            .video-container video {
+                width: 100%;
+            }
+
+        a {
+            text-decoration: none;
+            color: black;
         }
 
-        a{
-            text-decoration:none; 
-            color:black;
-        }
-        .empty{
-            margin-bottom:100px;
-        }
-        
-        section{
-            height:100vh;
+        .empty {
+            margin-bottom: 100px;
         }
 
-        .anotherheading{
-            margin:15px 5px;
-            font-weight:200; 
+        section {
+            height: 100vh;
+        }
+
+        .anotherheading {
+            margin: 15px 5px;
+            font-weight: 200;
         }
 
         .top {
             margin-top: 20px;
         }
 
-        #content{
-            border:1px solid black;
+        #content {
+            border: 1px solid black;
         }
 
-        .related-reading{
-            
+        .related-reading {
         }
-        
 
-        .related-reading li {
-            font-size:8px;
-            margin-left:0px 15px;
-            color:black;
-            text-decoration:underline;
-            letter-spacing:0.5px;
-            
-        }
+
+            .related-reading li {
+                font-size: 8px;
+                margin-left: 0px 15px;
+                color: black;
+                text-decoration: underline;
+                letter-spacing: 0.5px;
+            }
 
         @media only screen and (max-width:480px) {
             body {
@@ -320,7 +316,7 @@
                     <a href="#json_server"><li class="tLink">Why Use JSON Server?</li></a>
                     <a href="#json_server_operation"><li class="tLink">How Does JSON Server Operate?</li></a>
                     <li class="tLink1"><a href="#crud_with_json_server">CRUD Routing Using JSON Server</a><span id="show">Show</span></li>
-                    <div class="hide">
+                    
                         <li class="sub"><a href="#install_json_server">Install JSON Server</a></li>
                         <li class="sub"><a href="#configure_db_file">Configure db.json file</a></li>
                         <li class="sub"><a href="#running_json_server">Running JSON Server</a></li>
@@ -330,7 +326,7 @@
                         <li class="sub"><a href="#c_of_cud">C Of CUD</a></li>
                         <li class="sub"><a href="#u_of_cud">U Of CUD</a></li>
                         <li class="sub"><a href="#d_of_cud">D Of CUD</a></li>
-                    </div>
+                    
                     
 
                    
@@ -470,11 +466,11 @@
                         <img src="images/postman.jpg" />
 
 
-                        <h2 class="heading top" id="r_of_crud">Introducing POSTMAN</h2>
+                        <h2 class="heading top" id="cud_of_crud">Introducing POSTMAN</h2>
                         <p>Postman is very easy to setup and can even be installed in your system locally. As shown in the image above, Postman contains an address bar (where you can type out your server endpoints) and a send button to send data to the server. To the left of the address bar, there will be a dropdown that lists several methods.</p>
                         <p>For now, we’ll just focus on the following: POST, PATCH and DELETE (since we have already seen 'GET')</p>
 
-                        <h2 class="heading top" id="r_of_crud">Testing Routes (Endpoints) Using Postman</h2>
+                        <h2 class="heading top" id="c_of_cud">Testing Routes (Endpoints) Using Postman</h2>
                         <p>Adding Data To Server (C of CRUD)</p>
                         <div class="video-container">
                             <video controls loop style="border:1px solid black">
@@ -491,7 +487,7 @@
 
 
 
-                        <p>Updating Data Already Existing In Server (U of CRUD)</p>
+                        <p id="u_of_cud">Updating Data Already Existing In Server (U of CRUD)</p>
                         <div class="video-container">
                             <video controls loop style="border:1px solid black">
                                 <source src="videos/postmanPatch.mp4" type="video/mp4" />
@@ -507,7 +503,7 @@
 
 
 
-                        <p>Deleting Data From Server (D of CRUD)</p>
+                        <p id="d_of_cud">Deleting Data From Server (D of CRUD)</p>
                         <div class="video-container">
                             <video controls loop style="border:1px solid black">
                                 <source src="videos/postmanDelete.mp4" type="video/mp4" />
@@ -527,33 +523,7 @@
 
 
 
-                        <h2 class="heading top" style="color:red;" id="final_code">Final Code</h2>
-                        <br />
-                        <div class="server_code" id="server_code">
-
-
-                            <button id="btn" class="btn">Click To Copy</button>
-                            <div id="content" contenteditable="true">
-                                <p><code> const express = require('express');</code></p>
-                                <p><code>const app = express(); </code></p>
-
-
-                                <p><code>app.listen('3000', function () {</code></p>
-                                <p>
-                                    <code style="margin-left:25px;">
-
-                                        console.log('server is running @ 3000');
-                                    </code>
-                                </p>
-
-
-                                <p><code>})</code></p>
-                            </div>
-
-
-                        </div>
-
-                        <br /><br />
+                                                <br /><br />
 
 
 

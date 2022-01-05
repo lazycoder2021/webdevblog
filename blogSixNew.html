@@ -4,79 +4,76 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
-        *{
-            margin:0px; 
-            padding:0px;
-            box-sizing:border-box; 
-            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        xmp{
-            display:inline; 
+        xmp {
+            display: inline;
         }
 
-        .container{
-            height:auto; 
-            width:1200px;
-            border:0px solid black;
-            padding:10px;
-            
+        .container {
+            height: auto;
+            width: 1200px;
+            border: 0px solid black;
+            padding: 10px;
         }
 
-        html{
-            scroll-behavior: smooth; 
+        html {
+            scroll-behavior: smooth;
         }
 
-        .header{
-            display:flex;
-            align-items:center; 
-            justify-content:space-between; 
-            border:1px solid black;
-            border-radius:4px;
-            
-            
-        }
-        .header .header-text, .home-link {
-            margin:10px 10px;
-        }
-        .header .header-text p{
-            font-size:25px;
-            font-weight:600;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 4px;
         }
 
-        .header .home-link{
-            border:1px solid black; 
-            padding:8px 5px;
-            background-color:#ff6961; 
-            color:black;
-            border-radius:4px;
-        }
+            .header .header-text, .home-link {
+                margin: 10px 10px;
+            }
 
-        img{
-            width:800px;
-            height:100px;
+                .header .header-text p {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+            .header .home-link {
+                border: 1px solid black;
+                padding: 8px 5px;
+                background-color: #ff6961;
+                color: black;
+                border-radius: 4px;
+            }
+
+        img {
+            width: 800px;
+            height: 100px;
             //object-fit:cover;
         }
 
-        .heading{
-            font-weight:200;
-            margin:10px 3px;
+        .heading {
+            font-weight: 200;
+            margin: 10px 3px;
         }
 
-        .pane-container{
-            display:flex; 
-            margin-top:20px;
-                        
+        .pane-container {
+            display: flex;
+            margin-top: 20px;
         }
 
-        .left-pane{
-            width:25%; 
-            position:fixed; 
-            overflow-y:scroll;
-            margin-top:0px;
-              
-            
+        .left-pane {
+            width: 25%;
+            position: fixed;
+            overflow-y: scroll;
+            margin-top: 0px;
         }
 
             .left-pane ul li {
@@ -102,49 +99,49 @@
                 border-top: 1px solid #c2c2c2;
             }
 
-                .left-pane ul li:hover {
-                    background-color: #ff6347; 
-                }
+            .left-pane ul li:hover {
+                background-color: #ff6347;
+            }
 
         .right-pane {
             width: 75%;
             margin-left: 380px;
-            
         }
 
-        .ref{
-            margin-bottom:20px;
-            margin-top:0px;
-        }
-        
-
-        .buttons{
-            display:flex; 
-            align-items:center; 
-            justify-content:space-between; 
+        .ref {
+            margin-bottom: 20px;
+            margin-top: 0px;
         }
 
-        .buttons .button{
-            border:1px solid black; 
-            margin: 10px 5px;
-            padding:5px 15px;
-            background-color:#ff6961; 
-            color:black; 
-            cursor:pointer; 
-            border-radius:4px;
-        }
-        .main-content{
-            margin-top:25px;
-            height:100vh;
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .main-content p{
-            padding:10px 5px;
-            //letter-spacing:1.0px;
-            line-height:30px;
-            font-size:18px;
-            //font-weight:100;
+            .buttons .button {
+                border: 1px solid black;
+                margin: 10px 5px;
+                padding: 5px 15px;
+                background-color: #ff6961;
+                color: black;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+        .main-content {
+            margin-top: 25px;
+            height: 100vh;
         }
+
+            .main-content p {
+                padding: 10px 5px;
+                //letter-spacing:1.0px;
+                line-height: 30px;
+                font-size: 18px;
+                //font-weight:100;
+            }
 
             .main-content ol {
                 padding: 10px 5px;
@@ -153,13 +150,13 @@
                 line-height: 30px;
             }
 
-            .main-content ol li{
-                margin-bottom:18px;
-                font-size:18px;
-            }
+                .main-content ol li {
+                    margin-bottom: 18px;
+                    font-size: 18px;
+                }
 
-        span{
-            color:#ff6347; 
+        span {
+            color: #ff6347;
         }
 
         #show {
@@ -167,71 +164,70 @@
             right: 8px;
             background-color: black;
             color: white;
-            padding:1px 2px;
-            border-radius:4px;
-            cursor:pointer; 
+            padding: 1px 2px;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
-        .hide{
-            display:none; 
+        .hide {
+            display: none;
         }
 
-        .sub{
-            margin-left:10px;
+        .sub {
+            margin-left: 10px;
         }
 
         .sub2 {
             margin-left: 20px;
         }
 
-        .video-container{
-            width:600px;
-            height:auto;
-            margin:10px auto;
+        .video-container {
+            width: 600px;
+            height: auto;
+            margin: 10px auto;
         }
 
-        .video-container video{
-            width:100%; 
+            .video-container video {
+                width: 100%;
+            }
+
+        a {
+            text-decoration: none;
+            color: black;
         }
 
-        a{
-            text-decoration:none; 
-            color:black;
-        }
-        .empty{
-            margin-bottom:100px;
-        }
-        
-        section{
-            height:100vh;
+        .empty {
+            margin-bottom: 100px;
         }
 
-        .anotherheading{
-            margin:15px 5px;
-            font-weight:200; 
+        section {
+            height: 100vh;
+        }
+
+        .anotherheading {
+            margin: 15px 5px;
+            font-weight: 200;
         }
 
         .top {
             margin-top: 20px;
         }
 
-        #content{
-            border:1px solid black;
+        #content {
+            border: 1px solid black;
         }
 
-        .related-reading{
-            
+        .related-reading {
         }
-        
 
-        .related-reading li {
-            font-size:8px;
-            margin-left:0px 15px;
-            color:black;
-            text-decoration:underline;
-            letter-spacing:0.5px;
-            
-        }
+
+            .related-reading li {
+                font-size: 8px;
+                margin-left: 0px 15px;
+                color: black;
+                text-decoration: underline;
+                letter-spacing: 0.5px;
+            }
 
         @media only screen and (max-width:480px) {
             body {
@@ -315,25 +311,23 @@
             <div class="left-pane">
                 <p>Table Of Contents</p>
                 <ul>
-                    <a href="#routing"><li class="tLink">Routing</li></a>
-                    <a href="#crud_and_routing"><li class="tLink">CRUD and Routing Relationship</li></a>
-                    <a href="#json_server"><li class="tLink">Why Use JSON Server?</li></a>
-                    <a href="#json_server_operation"><li class="tLink">How Does JSON Server Operate?</li></a>
-                    <li class="tLink1"><a href="#crud_with_json_server">CRUD Routing Using JSON Server</a><span id="show">Show</span></li>
-                    <div class="hide">
-                        <li class="sub"><a href="#install_json_server">Install JSON Server</a></li>
-                        <li class="sub"><a href="#configure_db_file">Configure db.json file</a></li>
-                        <li class="sub"><a href="#running_json_server">Running JSON Server</a></li>
-                        <li class="sub"><a href="#r_of_crud">R Of CRUD</a></li>
-                        <li class="sub"><a href="#cud_of_crud">Introducing Postman</a></li>
-                 
-                        <li class="sub"><a href="#c_of_cud">C Of CUD</a></li>
-                        <li class="sub"><a href="#u_of_cud">U Of CUD</a></li>
-                        <li class="sub"><a href="#d_of_cud">D Of CUD</a></li>
-                    </div>
+                    <a href="#a"><li class="tLink">Create a Simple Server</li></a>
+                    <a href="#b"><li class="tLink">Rendering HTML Form</li></a>
+
+                    <li class="sub"><a href="#c">app.use(express.static('public'))</a></li>
+                    <li class="sub"><a href="#d">index.html File Rendering</a></li>
+
+                    <a href="#e"><li class="tLink">Creating The HTML Form</li></a>
+                    <a href="#f"><li class="tLink">How HTML Form Works?</li></a>
+                    <li class="tLink1"><a href="#g">Express Server Handling Submitted Data?</a></li>
+
+                    
+                    <li class="sub"><a href="#h">Enabling Server to Read Data</a></li>
+                    <li class="sub"><a href="#i">Receiving Submitted Data</a></li>
                     
 
-                   
+
+
 
                     <li style="color:transparent;">s</li>
                     <li style="color:transparent;">s</li>
@@ -363,7 +357,7 @@
                             </video>
                         </div>
                         <br />
-                        <h2 class="heading top" id="crud_and_routing">Create a Simple Server</h2>
+                        <h2 class="heading top" id="a">Create a Simple Server</h2>
 
                         <p>You already know this. Refer the video clip below to refresh your memory and setup an express server.</p>
                         <div class="video-container">
@@ -376,7 +370,7 @@
 
 
 
-                        <h2 class="heading top" id="json_server">Rendering HTML Form Using Express Server</h2>
+                        <h2 class="heading top" id="b">Rendering HTML Form Using Express Server</h2>
                         <p>First you have to configure express server such that starts serving html pages. To do this, you have to include the following line of code in your index.js file.</p>
 
                         <div class="video-container">
@@ -386,7 +380,7 @@
                         </div>
                         <br />
 
-                        <h3 class="heading top" id="json_server_operation">What does app.use(express.static('public')); do?</h3>
+                        <h3 class="heading top" id="c">What does app.use(express.static('public')); do?</h3>
                         <ol style="letter-spacing:0.3px;">
                             <li style="margin-left: 25px">It makes the app variable (which is our server) use a middleware called static</li>
                             <li style="margin-left: 25px">static is responsible for serving html pages from the server.</li>
@@ -402,7 +396,7 @@
                         <p>To know more about express.static middleware, read [this]</p>
                         <p>To know more about express middleware in general, read [this].</p>
                         <br />
-                        <h3 class="heading top" id="json_server_operation">Testing Whether index.html File Renders</h3>
+                        <h3 class="heading top" id="d">Testing Whether index.html File Renders</h3>
                         <p><b>Note:</b> Before doing this, ensure you add some html content in your index.html.</p>
                         <div class="video-container">
                             <video controls loop style="border:1px solid black">
@@ -419,7 +413,7 @@
 
                         <br />
 
-                        <h2 class="heading top" id="crud_with_json_server">Creating the HTML Form</h2>
+                        <h2 class="heading top" id="e">Creating the HTML Form</h2>
                         <p>
                             It’s time to create our html form. Here’s the code for it.
 
@@ -427,7 +421,7 @@
                         <img src="images/html-form.jpg" style="height:400px; border:1px solid black;" />
                         <p>Save the html form and restart your server using index.js command and you'll notice that it gets served at http://localhost:3000/</p>
                         <br />
-                        <h2 class="heading top" id="install_json_server">How HTML Form Works?</h2>
+                        <h2 class="heading top" id="f">How HTML Form Works?</h2>
                         <br />
                         <div class="video-container" style="border:1px solid black;">
                             <video controls>
@@ -450,7 +444,7 @@
 
 
                         <br />
-                        <h2 class="heading top" id="install_json_server">How Express Server Handles Submitted Data?</h2>
+                        <h2 class="heading top" id="g">How Express Server Handles Submitted Data?</h2>
                         <p>2 things need to be done to allow our server to receive the form data.</p>
 
                         <ol style="letter-spacing:0.3px;">
@@ -460,7 +454,7 @@
                         </ol>
 
                         <br />
-                        <h2 class="heading top" id="install_json_server">Enabling Our Server To Read The Data Being Submitted</h2>
+                        <h2 class="heading top" id="h">Enabling Our Server To Read The Data Being Submitted</h2>
                         <br />
                         <div class="video-container" style="border:1px solid black;">
                             <video controls>
@@ -476,7 +470,7 @@
                         </ol>
 
                         <br />
-                        <h2 class="heading top" id="install_json_server">Setup a Route for Receiving the Data Being Submitted</h2>
+                        <h2 class="heading top" id="i">Setup a Route for Receiving the Data Being Submitted</h2>
                         <br />
                         <div class="video-container" style="border:1px solid black;">
                             <video controls>

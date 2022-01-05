@@ -313,7 +313,7 @@
                     <a href="#server"><li class="tLink">Our Server Right Now</li></a>
                     <a href="#request_response_1"><li class="tLink">Configuring the Request</li></a>
                     <a href="#request_response_2"><li class="tLink">Configuring the Response</li></a>
-                    <a href="#request_response_2"><li class="tLink">Making Request/Getting Response</li></a>
+                    <a href="#request_response_3"><li class="tLink">Making Request/Getting Response</li></a>
                     <a href="#final_code"><li class="tLink">Final Code </li></a>
 
                     <li style="color:transparent;">s</li>
@@ -393,18 +393,23 @@
                         <ol style="letter-spacing:0.3px;">
 
 
-                            <li style="color:red;">We have to insert something between { } of the app.get() function to display a message. This something is the res (response) object being chained to its send() method to send the message (response) to the user via the browser screen. The code should be as follows:</li>
-                            <li style="color:red;">Video clip showing the same should go here</li>
+                            <li>We have to insert something between { } of the app.get() function to display a message. This something is the res (response) object being chained to its send() method to send the message (response) to the browser screen. The code should be as follows:</li>
+                            <div class="video-container">
+                                <video controls style="border:1px solid black;">
+                                    <source src="videos/videooo.mp4" />
+                                </video>
+                            </div>
+
                             <li><b>Note:</b> Anything written in res.send() gets displayed as the response on the browser screen when the corresponding endpoint is hit.</li>
                         </ol>
 
 
 
-                        <h2 class="heading top" id="dynamic_image">Making the Request and Getting the Response Back</h2>
+                        <h2 class="heading top" id="request_response_3">Making the Request and Getting the Response Back</h2>
                         <br />
                         <div class="video-container">
                             <video controls style="border:1px solid black;">
-                                <source src="videos/videos12.mp4" />
+                                <source src="videos/videos13.mp4" />
                             </video>
                         </div>
 
@@ -420,7 +425,7 @@
 
 
 
-                        <h2 style="color:red;" class="heading top" id="final_code">Final Code</h2>
+                        <h2 class="heading top" id="final_code">Final Code</h2>
                         <br />
                         <div class="server_code" id="server_code">
 
@@ -430,6 +435,9 @@
                                 <p><code> const express = require('express');</code></p>
                                 <p><code>const app = express(); </code></p>
 
+                                <p><code>app.get('/', (req, res) => {</code></p>
+                                <p><code>res.send('If you were a developer @ google, this could be the google home page that you might be developing ;)');</code></p>
+                                <p><code>})</code></p>
 
                                 <p><code>app.listen('3000', function () {</code></p>
                                 <p>
